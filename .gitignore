@@ -1,0 +1,47 @@
+# Visual Studio
+.vs/
+*.vc.db
+*.vc.db-shm
+*.vc.db-wal
+*.opendb
+*.user
+*.userosscache
+*.sln.docstates
+
+# Папки сборки
+build/
+out/
+Debug/
+Release/
+x64/
+x86/
+bin/
+
+# Исполняемые файлы
+*.exe
+*.out
+*.app
+
+# Объектные файлы
+*.obj
+*.pdb
+*.ilk
+*.lib
+*.dll
+
+# CMake
+CMakeCache.txt
+CMakeFiles/
+cmake_install.cmake
+Makefile
+*.cmake
+!CMakeLists.txt
+
+# Ninja
+.ninja_log
+.ninja_deps
+.ninja_bench
+
+# Системные файлы
+.DS_Store
+Thumbs.db
