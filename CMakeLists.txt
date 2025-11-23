@@ -5,11 +5,20 @@ set(CMAKE_CXX_STANDARD 14)
 
 find_package(OpenCV REQUIRED)
 
-add_executable(TargetAnalyzerFinal 
-    main.cpp 
-    hole_detector.h hole_detector.cpp
-    shooting_metrics.h shooting_metrics.cpp  
-    visualization.h visualization.cpp
+# Все исходные файлы
+add_executable(TargetAnalyzerFinal
+    main.cpp
+    common/hole_detector.cpp
+    common/shooting_metrics.cpp  
+    common/visualization.cpp
+    weapons/pm.cpp
 )
 
-target_link_libraries(TargetAnalyzerFinal PRIVATE ${OpenCV_LIBS})
+# Директории с заголовками
+target_include_directories(TargetAnalyzerFinal PRIVATE
+    ${CMAKE_CURRENT_SOURCE_DIR}
+    ${CMAKE_CURRENT_SOURCE_DIR}/common
+    ${CMAKE_CURRENT_SOURCE_DIR}/weapons
+)
+
+target_link_libraries(TargetAnalyzerFinal ${OpenCV_LIBS})
